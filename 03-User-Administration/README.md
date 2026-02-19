@@ -110,11 +110,12 @@ After completing setup and troubleshooting, domain login was validated successfu
 
 Login using domain user:
 
-![Domain Login](images/client01_login_domain_user.png)
+![Session Log](images/session_log_ccalderon.png)
 
 User session confirmation:
 
-![Session Log](images/session_log_ccalderon.png)
+
+![Domain Login](images/client01_login_domain_user.png)
 
 ---
 
