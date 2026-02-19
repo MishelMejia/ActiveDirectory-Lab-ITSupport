@@ -51,7 +51,7 @@ This reflects a common real-world scenario where admins must follow password sta
 
 After correcting the password policy issue, the account was successfully configured and enabled.
 
-![Password Reset](images/reset-password-mlopez.png)
+
 
 ---
 
