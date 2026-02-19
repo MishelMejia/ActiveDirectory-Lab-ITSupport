@@ -90,9 +90,6 @@ Successful domain join confirmation:
 ## 5️⃣ Troubleshooting — Connectivity Issue
 
 A ping test initially failed, demonstrating a typical troubleshooting scenario handled by IT Support teams.
-
-![Ping Issue](images/IMG_03_ping_domain.png)
-
 Root cause identified:
 
 - DNS configuration mismatch between client and Domain Controller
@@ -102,6 +99,8 @@ Resolution steps:
 - Verified DNS server IP address
 - Confirmed VM network adapter settings
 - Validated connectivity after correction
+
+![Ping Correct](images/IMG_03_ping_domain.png)
 
 ---
 
