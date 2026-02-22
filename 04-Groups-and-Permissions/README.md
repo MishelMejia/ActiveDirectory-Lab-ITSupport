@@ -194,10 +194,6 @@ Resolution:
 
 Share permissions were updated to allow proper access while NTFS groups enforced security.
 
-## Evidence
-
-![Troubleshooting Fixed](images/troubleshooting-share-permissions-fixed.png)
-
 ---
 
 # What I Learned
