@@ -103,7 +103,7 @@ Seeing the changes directly on the client machine helped reinforce how Group Pol
 
 ## Evidence
 
-![Desktop Policy Applied](images/10.1.desktop_policyapplied.png)
+![Desktop Policy Applied](images/10.1.desktop_bfpolicyapplied.png)
 ![Client Validation](images/11.gpo-policy-applied-client.png)
 
 ---
