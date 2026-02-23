@@ -102,8 +102,11 @@ After refreshing policies, desktop behavior changed as expected, confirming succ
 Seeing the changes directly on the client machine helped reinforce how Group Policy impacts the end-user environment.
 
 ## Evidence
+Desktop Before Apply the policy
 
 ![Desktop Policy Applied](images/10.1.desktop_bfpolicyapplied.png)
+
+Desktop after apply the policy
 ![Client Validation](images/11.gpo-policy-applied-client.png)
 
 ---
