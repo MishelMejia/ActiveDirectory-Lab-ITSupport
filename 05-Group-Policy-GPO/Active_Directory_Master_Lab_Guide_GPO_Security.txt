@@ -1,0 +1,159 @@
+🔐 Active Directory Master Lab Guide — Group Policy & Security
+Configuration
+
+⭐ PURPOSE OF THIS GUIDE This document is a complete step-by-step
+reference for building and validating Group Policy and Security
+configurations inside an Active Directory lab environment. It simulates
+real IT Support tasks such as workstation configuration, policy
+troubleshooting, and identity security management.
+
+────────────────────────────────────
+
+PART 1 — Environment Preparation
+
+Verify the following before starting: • Domain Controller (DC01) is
+running • Active Directory installed • CLIENT01 joined to the domain •
+Test users created
+
+Open: Server Manager → Tools → Active Directory Users and Computers
+
+────────────────────────────────────
+
+PART 2 — Create the Base Domain GPO
+
+Open: Server Manager → Tools → Group Policy Management
+
+Navigate: Forest → Domains → yourdomain.local
+
+Right-click the domain: Create a GPO in this domain and Link it here
+
+Suggested name: GPO-Workstation-Baseline
+
+────────────────────────────────────
+
+PART 3 — User Configuration
+
+Edit the GPO: User Configuration → Policies → Administrative Templates →
+Desktop
+
+Configure a visible desktop setting (example: Remove Recycle Bin icon).
+This helps validate policy application quickly.
+
+────────────────────────────────────
+
+PART 4 — Computer Configuration
+
+Edit: Computer Configuration → Policies → Administrative Templates →
+System
+
+Enable: Display Shutdown Event Tracker
+
+User policies affect sessions. Computer policies affect the device
+itself.
+
+────────────────────────────────────
+
+PART 5 — GPO Linking and Scope
+
+Verify the GPO is linked at the domain level. This demonstrates policy
+inheritance across Organizational Units.
+
+────────────────────────────────────
+
+PART 6 — Security Filtering
+
+Select the GPO and review: Security Filtering → Authenticated Users
+
+Keep default filtering during testing.
+
+────────────────────────────────────
+
+PART 7 — Client Policy Update
+
+On CLIENT01 run:
+
+gpupdate /force
+
+This forces the workstation to retrieve updated policies from the Domain
+Controller.
+
+────────────────────────────────────
+
+PART 8 — Policy Verification
+
+Run:
+
+gpresult /r
+
+Check “Applied Group Policy Objects” to confirm the GPO is active.
+
+────────────────────────────────────
+
+PART 9 — Desktop Validation
+
+After refresh: • Desktop behavior changes • Shutdown Event Tracker
+appears
+
+This confirms successful GPO application.
+
+────────────────────────────────────
+
+PART 10 — Domain Password Policy
+
+Open Default Domain Policy:
+
+Computer Configuration → Windows Settings → Security Settings → Account
+Policies → Password Policy
+
+Configure: • Minimum password length • Complexity • Maximum password age
+
+Only the Default Domain Policy controls domain-wide passwords.
+
+────────────────────────────────────
+
+PART 11 — Create Workstations OU
+
+Active Directory Users and Computers: Create OU → Workstations Move
+CLIENT01 into this OU.
+
+────────────────────────────────────
+
+PART 12 — OU Specific GPO
+
+Right-click Workstations OU: Create GPO and link it here
+
+Example name: GPO-Workstations-Config
+
+────────────────────────────────────
+
+PART 13 — Inheritance Testing
+
+Right-click Workstations OU → Block Inheritance
+
+Observe how domain policies stop applying unless enforced.
+
+Key concepts: • Order • Inheritance • Enforcement
+
+────────────────────────────────────
+
+PART 14 — Fine-Grained Password Policy (FGPP)
+
+Create Security Group: GG_StandardUsers
+
+Open: Active Directory Administrative Center → System → Password
+Settings Container
+
+Create New Password Settings and assign to GG_StandardUsers.
+
+FGPP applies to USERS or GROUPS — not OUs.
+
+────────────────────────────────────
+
+PART 15 — Core Concepts Learned
+
+• User vs Computer Configuration • GPO Scope and Linking • Policy
+Inheritance and Precedence • Security Filtering • gpupdate and gpresult
+troubleshooting • Domain Password Policy vs FGPP
+
+This lab reflects real IT Support responsibilities involving centralized
+configuration, identity security, and workstation troubleshooting.
