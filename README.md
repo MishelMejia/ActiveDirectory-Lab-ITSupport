@@ -38,8 +38,7 @@ Throughout this project I’m focusing on skills commonly used in IT Support and
 03-User-Administration  
 04-Groups-and-Permissions  
 05-Group-Policy-GPO  
-06-PowerShell-Automation  
-07-Troubleshooting  
+
 
 Each section reflects a different part of the learning process as I build and manage this environment step by step.
 
