@@ -46,7 +46,7 @@ Each section reflects a different part of the learning process as I build and ma
 
 ## 🎯 Why I Built This Lab
 
-As someone transitioning into IT Support roles, I wanted more than certificates — I wanted real practice.
+As someone transitioning into IT Support roles, I wanted more than certificates, I wanted real practice.
 
 This lab helps me understand how enterprise environments are structured and how IT teams manage users, access, and systems in a practical way.
 
